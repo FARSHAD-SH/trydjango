@@ -1,5 +1,26 @@
 {% extends "base.html" %}
+
+
 {% block content %}
     <h1> About!</h1>
     <p1> This is a template</p1>
+
+
+    <p>
+    {{ my_text }}, {{ my_number }}, {{ my_list }}
+    </p>
+
+    <ul>
+        {% for item in my_list %}
+            {% if item == 123 %}
+                <li>{{forloop.counter}} - {{ item }} - is equal to 123</li>
+            {% elif item == "Abc" %}
+                <li>This is not the network</li>
+            {% else %}
+                <li>{{forloop.counter}} - {{ item }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
 {% endblock %}
+
