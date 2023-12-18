@@ -1,2 +1,13 @@
-<h1> Hello World!</h1>
-<p1> This is a template</p1>
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1> Hello World!</h1>
+    <p>{{request.user}}<br>
+{% endblock %}
+
+{% block sidebar %}
+    {{request.method}}<br>
+    {{request.get_host}}<br>
+    {{request.get_full_path}}<br>
+    <p1> This is a template</p1>
+{% endblock %}
