@@ -46,6 +46,10 @@ INSTALLED_APPS = [
     'products',
     'pages',
 
+    # ORM apps
+    # 'core',
+    'student',
+
     # Third party apps
 
     # Custom apps
